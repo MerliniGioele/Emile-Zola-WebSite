@@ -1,0 +1,96 @@
+body {
+    background-image: url("../images/wallpaper.jpg");
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Gentium Book Plus', Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-weight: 700;
+}
+
+nav {
+    background-color: #f8f9fa;
+    padding: 10px;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.container {
+    position: relative;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    color: whitesmoke;
+    font-size: 4vw;
+    font-weight: 800;
+}
+
+#titleHome {
+    font-family: 'Moon Dance', sans-serif, cursive;
+    font-weight: 700;
+    font-size: 4em; 
+    padding:0rem;
+}
+
+#page_wrapper {
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+}
+
+#biopic {
+    font-size:x-large;
+    text-align: justify;
+}
+
+#first_block {
+    flex: 1;
+    padding: 3px 0 0 0;
+    background-color: #D3D3D3;
+
+}
+
+#second_block {
+    flex: 1;
+    padding: 10px;
+    background-color: azure;
+}
+
+#zola_potrait {
+    padding: 0;
+    margin-right: 0%;
+}
+
+#sezione_cit {
+    font-size: x-large;
+}
+
+#contesto {
+    text-align: right;
+}
+
+#libri_vendita div{
+    display: grid;
+    place-items: center; 
+}
+#libri_vendita div *{
+    margin: 10px; 
+}

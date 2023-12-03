@@ -1,0 +1,18 @@
+Questa sarà un'attività coinvolgente e bruciante nella sua immanenza spirituale e morale;
+In questa attività devo creare un sito web ...
+
+Dediacato e trattante la figura dello scrittore francese del secondo '800 => Émile Zola
+
+Il sito deve avere: 
+- Navbar, la quale si trasforma in hamburger se usato da un dispositivo mobile 
+- una pagina principale (Home page) [magari con un bel carousel o altri dettagli]
+- 4/5 o + barre da richiamare nella barra di navigazione 
+
+Api key Google Books => AIzaSyBYoh8bmeycS-MkfKcD-krgV6uVOO1sP40
+
+
+organizzazione (e problemi):
+* [FOOTER]
+* navigazione tra pagine
+* inserimento del contenuto della pagine (cosa ci scrivo e come le riempo)
+
