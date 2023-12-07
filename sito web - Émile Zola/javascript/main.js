@@ -4,7 +4,7 @@ const apiKey = 'AIzaSyBYoh8bmeycS-MkfKcD-krgV6uVOO1sP40'; // Sostituisci con la 
 
 // Funzione per ottenere informazioni su un libro di Émile Zola
 function getBookInfo(author) {
-  const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=inauthor:${encodeURIComponent(authorName)}&key=${apiKey}`;
+  const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=inauthor:${encodeURIComponent(author)}&key=${apiKey}&maxResults=20`;
 
   // Restituisci una nuova Promise
   return new Promise((resolve, reject) => {
@@ -19,14 +19,20 @@ function getBookInfo(author) {
       .then(data => {
         // Verifica se sono presenti risultati
         if (data.totalItems > 0) {
-          const book = data.items[0].volumeInfo;
-          resolve({
-            title: book.title,
-            author: book.authors.join(', '),
-            description: book.description,
-            infoLink: book.infoLink,
-            thumbnail: book.imageLinks.thumbnail
-          });
+            const books = data.items.map(item => {
+              const book = item.volumeInfo;
+              if (book.imageLinks && book.imageLinks.thumbnail) {
+                  return {
+                      title: book.title,
+                      author: book.authors.join(','),
+                      description: book.description,
+                      infoLink: book.infoLink,
+                      thumbnail: book.imageLinks.thumbnail
+                  };
+              }
+              return null;
+          }).filter(book => book !== null); // Rimuovi gli elementi null dalla lista
+          resolve(books);
         } else {
           resolve('Nessun risultato trovato.');
         }
@@ -37,36 +43,57 @@ function getBookInfo(author) {
   });
 }
 
-// Esempio di utilizzo
-const authorName = 'Émile Zola'; // Sostituisci con il nome dell'autore
+function renderBooks(books) {
+  const sezione_libri = $("#libri_vendita");
 
-// Utilizza la Promise restituita dalla funzione getBookInfo
-getBookInfo(authorName)
-  .then(result => {
-    console.log(result);
-    const sezione_libri = document.querySelector("#libri_vendita");
-    const nuovoDiv = document.createElement("div");
+  books.forEach(libro => {
+    const nuovoDiv = $("<div>").addClass("libro");
 
-    const imgElement = document.createElement("img");
-    imgElement.src = result.thumbnail;
-    imgElement.alt = result.title;
+    const imgElement = $("<img>")
+      .attr("src", libro.thumbnail)
+      .attr("alt", libro.title);
     nuovoDiv.append(imgElement);
 
-    const button = document.createElement("button");
-    button.textContent = "Vai al link";
-    button.addEventListener("click", function() {
-      window.open(result.infoLink, "_blank");
-    });
+    const button = $("<button>")
+      .text("Vai al libro")
+      .addClass("btn btn-primary")
+      .attr("type", "button")
+      .on("click", function() {
+        window.open(libro.infoLink, "_blank");
+      });
     nuovoDiv.append(button);
 
-    sezione_libri.append(nuovoDiv)
-
-  })
-  .catch(error => {
-    console.error(error);
+    sezione_libri.append(nuovoDiv);
   });
 
+  // Configurazione del carousel Owl dopo aver aggiunto gli elementi
+  sezione_libri.owlCarousel({
+    loop: false,
+    margin: 15,
+    autoplay: false,
+    nav: false,
+    dots: true,
+    responsive: {
+      0: { items: 2 },
+      575: { items: 3 },
+      768: { items: 4 },
+      991: { items: 5 },
+      1199: { items: 7 }
+    }
+  });
+}
 
+// Esempio di utilizzo
+$(document).ready(function () {
+  const authorName = 'Émile Zola';
+
+  getBookInfo(authorName)
+    .then(renderBooks)
+    .catch(error => {
+      console.error(error);
+      // Inserisci gestione dell'errore qui
+    });
+});
 
 //INSERIMENTO Citazioni
 fetch('quotes.json')
@@ -80,29 +107,27 @@ fetch('quotes.json')
 .catch( err => console.error(`Fetch problem: ${err.message}`) );
 
 function initialize(elements){
-    const sezioneCit = document.querySelector("#sezione_cit");
+    const sezioneCit = $("#sezione_cit");
     let index = 0;
 
     function mostraCitazione() {
-        const paragrafoCit = document.createElement("p");
-        paragrafoCit.id="citazione"
-        const ParagrafoCtxt = document.createElement("p");
-        ParagrafoCtxt.id="contesto"
+        const paragrafoCit = $("<p>")
+            .attr("id", "citazione")
+            .html(`<em>"${elements[index].cit}"</em>`);
 
-        paragrafoCit.innerHTML = `<em>"${elements[index].cit}"</em>`;
-        ParagrafoCtxt.textContent = elements[index].context;
+        const ParagrafoCtxt = $("<p>")
+            .attr("id", "contesto")
+            .text(elements[index].context);
 
-        sezioneCit.innerHTML='';
-
-        sezioneCit.appendChild(paragrafoCit);
-        sezioneCit.appendChild(ParagrafoCtxt);
+        sezioneCit.empty();
+        sezioneCit.append(paragrafoCit, ParagrafoCtxt);
 
         index = (index + 1) % elements.length;
     }
 
-    //inizia mostrando la prima citazione
+    // inizia mostrando la prima citazione
     mostraCitazione();
 
-    //intervallo per cambiare la citazione ogni 6 secondi
+    // intervallo per cambiare la citazione ogni 6 secondi
     setInterval(mostraCitazione, 5500);
 }
