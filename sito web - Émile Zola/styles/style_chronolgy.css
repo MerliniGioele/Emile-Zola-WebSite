@@ -1,3 +1,7 @@
+body > div {
+    background-color: #fff7e6;
+}
+
 /* The actual timeline (the vertical ruler) */
 .main-timeline {
 position: relative;
@@ -118,4 +122,11 @@ position: relative;
 .right {
     left: 0%;
 }
+}
+
+.images {
+    height: 20vW;
+}
+.image-container{
+    text-align: center;
 }

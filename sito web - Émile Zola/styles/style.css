@@ -56,6 +56,10 @@ footer {
     padding:0rem;
 }
 
+#collapsibleNavbar{
+  text-align: left;
+}
+
 #page_wrapper {
     margin-top: 0px;
     margin-right: auto;
@@ -93,6 +97,9 @@ footer {
 #zola_potrait {
     padding: 0;
     margin-right: 0%;
+}
+#zola_dipinto {
+  height:fit-content
 }
 
 #sezione_cit {
