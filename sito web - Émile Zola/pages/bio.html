@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -11,13 +12,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gentium+Book+Plus">
 
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/style_bio.css">
     <script src="../javascript/main.js" defer></script>
-    <style>
-        #page_wrapper {
-            min-height: calc(100vh); /* Altezza della finestra meno l'altezza dell'header */
-            background-color: white; /* Colore di sfondo bianco */
-        }
-    </style>
+    <script src="../javascript/images.js" defer></script>
+
 
     <link rel="icon" type="images/" href="../images/favicon.ico">
     <title>Émile Zola: Biografia</title>
@@ -33,10 +31,9 @@
               <div class="collapse navbar-collapse mx-5" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="navbar-brand"><a class="nav-link text-light" href="../index.html">Home</a></li>
-                    <li class="navbar-brand"><a class="nav-link text-light" href="opere.html">Opere</a></li>
                     <li class="navbar-brand"><a class="nav-link text-light" href="#">Biografia</a></li>
+                    <li class="navbar-brand"><a class="nav-link text-light" href="opere.html">Opere</a></li>
                     <li class="navbar-brand"><a class="nav-link text-light" href="jaccuse.html">J'accuse</a></li>
-                    <li class="navbar-brand"><a class="nav-link text-light" href="foto.html">Galleria</a></li>
                     <li class="navbar-brand"><a class="nav-link text-light" href="cronologia.html">Cronologia</a></li>
                 </ul>
               </div>
@@ -45,28 +42,39 @@
     </header>
 
     <div class="container" id="page_wrapper">
-        <div class="row" id="first_block">
+        <div class="content_page">
+            <h1>Émile Zola: Una Vita Dedicata alla Letteratura e alla Giustizia</h1>
+            <hr>
+            <p class="testo_bio p-3">
+                <img class="immagine_modal float-start" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Zola_6_ans_enfant.jpg" alt="Émile Zola a 6 anni">  
+                <b>Infanzia ad Aix-en-Provence (1840-1858):</b><br>
+                La giovinezza di Zola trascorse ad Aix-en-Provence, dove suo padre, Francesco Zola, un ingegnere italiano, e sua madre, Émilie Aubert, gli trasmesero influenze culturali e un ambiente familiare ricco di spunti intellettuali. Tuttavia, la loro modesta situazione finanziaria pose delle sfide, spingendo il giovane Émile a sviluppare una resilienza che avrebbe caratterizzato la sua vita. L'atmosfera della Provenza, con i suoi colori vivaci e la ricchezza della cultura mediterranea, influenzò la sensibilità artistica di Zola.<br><br>
+
+                <b>Trasferimento a Parigi (1858-1867):</b><br>
+                Nel 1858, Zola si trasferì a Parigi, la città che sarebbe diventata l'epicentro della sua carriera e della sua creatività. Le prime sfide lo videro lavorare come commesso in un negozio, ma la sua passione per la scrittura lo spinse verso la carriera letteraria. I suoi primi scritti, pubblicati su riviste, prefigurarono la sua emergente voce critica nei confronti della società.<br><br>
+
+                <img class="immagine_modal float-end" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/%C3%89mile_Zola_by_Carjat.jpg/800px-%C3%89mile_Zola_by_Carjat.jpg" alt="Émile Zola nel 1865">
+                <b>Thérèse Raquin e l'Ascesa (1867-1871):</b><br>
+                L'anno cruciale fu il 1867, quando Zola pubblicò "Thérèse Raquin", un romanzo psicologico e sensuale che rivelò la sua abilità nel ritrarre la complessità della psiche umana. Il successo di questo romanzo fu un trampolino di lancio per la sua carriera, portandolo a esplorare nuove direzioni nella narrativa. Questo periodo segnò l'inizio del suo coinvolgimento più profondo con la critica sociale e l'interesse per le dinamiche umane.<br><br>
+
+                <b>Il Ciclo dei Rougon-Macquart (1871-1893):</b><br>
+                Il capolavoro indiscusso di Zola è il ciclo "Les Rougon-Macquart", un affresco letterario composto da venti romanzi che indagano sulla società francese attraverso le vicende di due famiglie interconnesse. Iniziato nel 1871 con "La Fortune des Rougon", il ciclo esplora una vasta gamma di temi sociali, politici e umani. Ogni romanzo è un tassello nella costruzione di un panorama letterario complesso e interconnesso.<br><br>
+
+                <img class="immagine_modal float-start" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Emile_Zola_1902.jpg/800px-Emile_Zola_1902.jpg" alt="Émile Zola nei primi del '900">
+                <b>Filosofia Naturalista e Impegno Politico (1877-1898):</b><br>
+                La filosofia naturalista di Zola, ispirata al positivismo scientifico, si rifletteva nella sua scrittura dettagliata e realistica. Opere come "L'Assommoir" (1877), che affronta l'alcolismo, e "Germinal" (1885), epica rappresentazione delle lotte dei minatori, lo distinsero come "romanziere sperimentale". Oltre alla sua attività letteraria, Zola in questi anni si affermò anche come giornalista e critico.<br>
+                Il punto culminante del suo impegno politico fu la controversa vicenda di Dreyfus nel 1898. La sua famosa lettera aperta "J'Accuse...!" dimostrò la sua feroce difesa della giustizia e dei diritti umani, ma gli procurò anche numerosi ammiratori e nemici.<br><br>
+
+                <b>Morte e Eredità Duratura (1902):</b><br>
+                La morte di Émile Zola il 29 settembre 1902, a 62 anni, rimane oggetto di dibattito. La versione ufficiale afferma che morì a causa di un'intossicazione da monossido di carbonio in un incidente domestico. La sua vita è stata caratterizzata da una dedizione incrollabile alla letteratura, alla verità e alla giustizia.<br>
+                L'eredità di Émile Zola è vasta e duratura. La sua influenza sulla letteratura e la critica sociale si estende ben oltre il suo tempo, ispirando generazioni di scrittori e intellettuali. La sua capacità di penetrare nelle profondità dell'animo umano e di riflettere la complessità della società lo rendono una figura irrinunciabile nella storia letteraria mondiale. La vita e il lavoro di Zola continuano a ispirare la riflessione critica e il dibattito culturale, consolidando il suo status di gigante letterario e difensore della verità.<br><br>
+            </p>
         </div>
-        <p>
-            
-            Emile Zola, nato il 2 aprile 1840 a Parigi, in Francia, è una figura di rilievo nell'ambito letterario del XIX secolo, celebre per la sua vasta produzione, l'approccio naturalista rivoluzionario e il fervente impegno civile. La sua vita e la sua carriera si intrecciano con l'evoluzione culturale e sociale della Francia del suo tempo.<br>
-
-            L'infanzia di Zola trascorse ad Aix-en-Provence, dove suo padre, Francesco Zola, un ingegnere italiano, e sua madre, Émilie Aubert, gli trasmisero influenze culturali e un ambiente familiare ricco di spunti intellettuali. Tuttavia, la loro situazione finanziaria modesta pose delle sfide, costringendo il giovane Emile a sviluppare una resilienza che avrebbe caratterizzato la sua vita.<br>
-
-            Nel 1858, Zola si trasferì a Parigi, città che sarebbe diventata l'epicentro della sua carriera e della sua creatività. Le prime fatiche lo videro lavorare come commesso in un negozio, ma la sua passione per la scrittura lo guidò verso la carriera letteraria. I primi scritti di Zola furono pubblicati su riviste, anticipando la sua emergente voce critica nei confronti della società.<br>
-
-            L'anno fondamentale fu il 1867, quando Zola pubblicò "Thérèse Raquin", un romanzo psicologico e sensuale che anticipava la sua abilità nel ritrarre la complessità della psiche umana. Il successo di questo romanzo fu un trampolino di lancio per la sua carriera, portandolo a esplorare nuove direzioni nella narrativa.<br>
-
-            Il capolavoro indiscusso di Zola è il ciclo "Les Rougon-Macquart", un monumentale affresco letterario composto da venti romanzi che indagano sulla società francese del suo tempo attraverso le vicende di due famiglie interconnesse. Iniziato nel 1871 con "La Fortune des Rougon", il ciclo attraversa una vasta gamma di temi sociali, politici e umani. Ogni romanzo è un tassello nella costruzione di un panorama letterario complesso e interconnesso.<br>
-
-            La filosofia naturalista di Zola, ispirata al positivismo scientifico, si rifletteva nella sua scrittura dettagliata e realistica. "L'Assommoir" (1877) affronta l'alcolismo, mentre "Germinal" (1885) offre una rappresentazione epica delle lotte dei minatori. La sua osservazione scientifica applicata alla narrativa lo distingueva come un "romanziere sperimentale", termine coniato da lui stesso.<br>
-
-            Oltre alla sua attività letteraria, Zola si distinse come giornalista e critico. Il suo coinvolgimento nella controversia di Dreyfus nel 1898, culminato nella famosa lettera aperta "J'Accuse...!", dimostrò la sua feroce difesa della giustizia e dei diritti umani. La sua integrità gli procurò sia ammiratori che nemici, segnando un capitolo tumultuoso nella sua vita.<br>
-
-            La morte di Zola il 29 settembre 1902, a 62 anni, rimane oggetto di dibattito. La versione ufficiale afferma che morì a causa di un'intossicazione da monossido di carbonio in un incidente domestico. Questo evento pose fine a una vita caratterizzata da una dedizione incrollabile alla letteratura, alla verità e alla giustizia.<br>
-
-            L'eredità di Emile Zola è vasta e duratura. La sua influenza sulla letteratura e la critica sociale si estende ben oltre il suo tempo, ispirando generazioni di scrittori e intellettuali. La sua capacità di penetrare nelle profondità dell'animo umano e di riflettere la complessità della società lo rendono una figura irrinunciabile nella storia letteraria mondiale. La sua vita e il suo lavoro continuano a ispirare la riflessione critica e il dibattito culturale, consolidando il suo status di gigante letterario e difensore della verità.<br>
-        </p>
+    </div>
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img alt="" class="modal-content" id="img01">
+        <div id="caption"></div>
     </div>
 
     <footer>

@@ -1,0 +1,114 @@
+h1 {
+    text-align: center;
+}
+#page_wrapper p {
+    text-align: justify;
+}
+#page_wrapper {
+    border-top:#D3D3D3 5px solid; 
+    border-bottom:#D3D3D3 5px solid; 
+}
+.content_page {
+    margin: 20px 0;
+}
+.testo_bio {
+    font-size: x-large;
+}
+hr {
+    border: 0;
+    border-top: 3px double #333;
+}
+.content_page img {
+    padding: 2px;
+    border: 1px solid ;
+    height: 13em;
+    margin: 0 10px;
+}
+
+.immagine_modal {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.immagine_modal:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    font-family: Arial, Helvetica, sans-serif;
+    display: hidden; /* Hidden by default */
+    position: fixed; 
+    z-index: 1;
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    text-align: center;
+    display: block;
+    height: 80%;
+    max-height: 700px;
+    width: auto;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    height: 80%;
+    max-height: 700px;
+    color: #ccc;
+    padding: 10px 0;
+    width: auto;
+    text-align: center;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        height: 100%;
+    }
+}

@@ -4,7 +4,6 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     font-family: 'Gentium Book Plus', Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -84,22 +83,19 @@ footer {
 #second_block {
     flex: 1;
     padding: 10px;
-    background-color: azure;
     margin: 10px;
 }
 
 #third_block {
   flex: 1;
-  background-color: azure;
   margin: 10px;
 }
 
 #zola_potrait {
     padding: 0;
     margin-right: 0%;
-}
-#zola_dipinto {
-  height:fit-content
+    background:  #1a0000
+
 }
 
 #sezione_cit {
