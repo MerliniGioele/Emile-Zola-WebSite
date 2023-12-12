@@ -134,6 +134,14 @@ footer {
   transform: scale(1.1); 
 }
 
+#libri_vendita_general p {
+  font-size: x-large;
+  margin: 80px 0;
+}
+#libri_vendita_general .spinner-border{
+  text-align: center;
+}
+
 .owl-theme {
   margin: 0;
 }

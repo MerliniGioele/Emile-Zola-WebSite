@@ -12,13 +12,34 @@ h1 {
 .content_page {
     margin: 20px 0;
 }
+.jaccuse_page {
+    margin: 20px 0;
+}
+    
 .testo_bio {
     font-size: x-large;
 }
-hr {
+
+/* hr {
     border: 0;
     border-top: 3px double #333;
+} */
+hr {
+    border-top: 3px double #000;
+    color: #000;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
 }
+  
+hr:after {
+    background: #fff;
+    content: '⁂';
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
+}
+  
 .content_page img {
     padding: 2px;
     border: 1px solid ;
