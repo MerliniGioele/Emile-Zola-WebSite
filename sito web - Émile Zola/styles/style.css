@@ -68,6 +68,10 @@ footer {
     background-color: white; 
 }
 
+#page_wrapper {
+  border-bottom:#D3D3D3 5px solid; 
+}
+
 #biopic {
     font-size:x-large;
     text-align: justify;
@@ -161,4 +165,20 @@ footer {
 
 #link_homepage:hover > span {
   transform: translateX(60%);
+}
+
+#first_block hr {
+  border-top: 3px double #000;
+  color: #000;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
+
+#first_block hr:after {
+  background: #D3D3D3;
+  content: '⁂';
+  padding: 0 4px;
+  position: relative;
+  top: -13px;
 }

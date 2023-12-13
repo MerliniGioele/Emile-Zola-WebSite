@@ -96,8 +96,9 @@ $(document).ready(function () {
   });
 
 
+
   //INSERIMENTO Citazioni
-  fetch('quotes.json')
+  fetch('javascript/quotes.json')
   .then( response => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);

@@ -38,8 +38,8 @@ position: relative;
     width: 25px;
     height: 25px;
     right: -13px;
-    background-color: #505050;
-    border: 5px solid #f5df4d;
+    background-color: #333;
+    border: 5px solid #D3D3D3;
     top: 15px;
     border-radius: 50%;
     z-index: 1;
@@ -129,4 +129,9 @@ position: relative;
 }
 .image-container{
     text-align: center;
+}
+
+.content_page {
+    border-top:#D3D3D3 5px solid; 
+    border-bottom:#D3D3D3 5px solid; 
 }
