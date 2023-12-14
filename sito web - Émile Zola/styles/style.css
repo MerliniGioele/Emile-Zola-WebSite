@@ -76,6 +76,9 @@ footer {
     font-size:x-large;
     text-align: justify;
 }
+#biopic_box {
+  margin-top: 20px;
+}
 
 #first_block {
     flex: 1;

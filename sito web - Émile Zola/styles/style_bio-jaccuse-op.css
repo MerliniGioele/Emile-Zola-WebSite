@@ -145,4 +145,6 @@ hr:after {
 
 .jaccuse_page p {
     font-size: large;
+    text-indent: 1em; /* Indentazione per il primo paragrafo */
+    margin: 0; /* Elimina il margine superiore predefinito */
 }
