@@ -2,4 +2,4 @@
 
 # Sito web su Émile Zola (Front-end)
 
-Aprire e visualizzare il sito web tramite la funzionalità `Live Server` di Visual Studio Code
+Aprire e visualizzare il sito web tramite la funzione `Live Server` di Visual Studio Code
