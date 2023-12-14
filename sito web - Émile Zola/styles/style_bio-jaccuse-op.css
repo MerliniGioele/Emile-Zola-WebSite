@@ -2,6 +2,7 @@ h1 {
     text-align: center;
     font-size: 50px;
 }
+
 #page_wrapper p {
     text-align: justify;
 }
@@ -9,26 +10,32 @@ h1 {
     border-top:#D3D3D3 5px solid; 
     border-bottom:#D3D3D3 5px solid; 
 }
+
 .content_page {
     margin: 20px 0;
+}
+.testo_bio {
+    font-size: x-large;
+}
+.opere_page {
+    font-size: large;
 }
 .jaccuse_page {
     margin: 20px 0;
 }
-    
-.testo_bio {
-    font-size: x-large;
-}
 
 hr {
+    margin-top: 20px;
+}
+
+.hr_first {
     border-top: 3px double #000;
     color: #000;
     overflow: visible;
     text-align: center;
     height: 5px;
-}
-  
-hr:after {
+}  
+.hr_first:after {
     background: #fff;
     content: '⁂';
     padding: 0 4px;
@@ -42,6 +49,9 @@ hr:after {
     height: 13em;
     margin: 0 10px;
 }
+.opere_page img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
 
 .immagine_modal {
     cursor: pointer;
@@ -50,23 +60,23 @@ hr:after {
 
 .immagine_modal:hover {opacity: 0.7;}
 
-/* The Modal (background) */
+/* Modal (background) */
 .modal {
     font-family: Arial, Helvetica, sans-serif;
-    display: hidden; /* Hidden by default */
+    display: hidden; /* hidden */
     position: fixed; 
     z-index: 1;
-    padding-top: 100px; /* Location of the box */
+    padding-top: 100px; /* posizione del box */
     left: 0;
     top: 0;
     width: 100%; 
     height: 100%; 
-    overflow: auto; /* Enable scroll if needed */
+    overflow: auto; /* scroll */
     background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    background-color: rgba(0,0,0,0.9); 
 }
 
-/* Modal Content (image) */
+/* Immagine del Modal */
 .modal-content {
     margin: auto;
     text-align: center;
@@ -76,7 +86,7 @@ hr:after {
     width: auto;
 }
 
-/* Caption of Modal Image */
+/* Descrizione del Modal */
 #caption {
     margin: auto;
     display: block;
@@ -88,7 +98,7 @@ hr:after {
     text-align: center;
 }
 
-/* Add Animation */
+/*Animazione*/
 .modal-content, #caption {  
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
@@ -106,7 +116,7 @@ hr:after {
     to {transform:scale(1)}
 }
 
-/* The Close Button */
+/* Close Button */
 .close {
     position: absolute;
     top: 15px;
@@ -124,7 +134,7 @@ hr:after {
     cursor: pointer;
 }
 
-/* 100% Image Width on Smaller Screens */
+/* Media queries - immagine 100% */
 @media only screen and (max-width: 700px){
     .modal-content {
         height: 100%;
@@ -146,5 +156,18 @@ hr:after {
 .jaccuse_page p {
     font-size: large;
     text-indent: 1em; /* Indentazione per il primo paragrafo */
-    margin: 0; /* Elimina il margine superiore predefinito */
+    margin: 0;
 }
+
+.opere_page h2 {
+    margin-top: 30px;
+}
+
+.opere_page img {
+    margin: 5px;
+}
+
+#fecondite {
+    height: 7em;    
+}
+

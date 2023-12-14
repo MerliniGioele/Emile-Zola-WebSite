@@ -2,11 +2,11 @@ $(document).ready(function () {
   //ESTRAZIONE LIBRI CON API di Google Books
   const apiKey = 'AIzaSyBYoh8bmeycS-MkfKcD-krgV6uVOO1sP40';
 
-  // Funzione per ottenere informazioni su un libro di Émile Zola
+  // Funzione per ottenere informazioni (json) su vari libri di Émile Zola
   function getBookInfo(author) {
     const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=inauthor:${encodeURIComponent(author)}&key=${apiKey}&maxResults=20`;
 
-    // Restituisci una nuova Promise
+    // Restituisce una nuova Promise
     return new Promise((resolve, reject) => {
       // Effettua una richiesta utilizzando Fetch
       fetch(apiUrl)
@@ -43,6 +43,7 @@ $(document).ready(function () {
     });
   }
 
+  //funzione per inserire i libri nella hompage del sito
   function renderBooks(books) {
     const sezione_libri = $("#libri_vendita");
 
@@ -98,7 +99,7 @@ $(document).ready(function () {
 
 
   //INSERIMENTO Citazioni
-  fetch('javascript/quotes.json')
+  fetch('javascript/quotes.json')//faccio una fetch del file quotes.json
   .then( response => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
@@ -106,7 +107,10 @@ $(document).ready(function () {
     return response.json();
   })
   .then( json => initialize(json) )
-  .catch( err => console.error(`Fetch problem: ${err.message}`) );
+  .catch( err => {
+    console.error(`Fetch problem: ${err.message}`);
+    $('#sezione_cit').append('<p>Non è possibile caricare le citazioni :( </p>');
+  });
 
   function initialize(elements){
       const sezioneCit = $("#sezione_cit");
@@ -130,7 +134,7 @@ $(document).ready(function () {
       // inizia mostrando la prima citazione
       mostraCitazione();
 
-      // intervallo per cambiare la citazione ogni 6 secondi
+      // intervallo per cambiare la citazione ogni 5,5 secondi
       setInterval(mostraCitazione, 5500);
   }
 

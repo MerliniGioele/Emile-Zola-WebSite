@@ -10,10 +10,10 @@ $(document).ready(function() {
       captionText.html($(this).attr("alt"));
     });
   
-    // Get the <span> element that closes the modal
+    // ottengo l'elemento <span> di classe .close (la X)
     var span = $(".close");
   
-    // When the user clicks on <span> (x), close the modal
+    // quando schiaccio la X il modal viene chiuso
     span.on("click", function() {
       modal.css("display", "none");
     });

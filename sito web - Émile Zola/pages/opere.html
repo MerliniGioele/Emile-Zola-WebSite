@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/style_bio-jaccuse-op.css">
     <script src="../javascript/main.js" defer></script>
+    <script src="../javascript/images.js" defer></script>
     
     <link rel="icon" type="images/" href="../images/favicon.ico">
 
@@ -41,65 +43,106 @@
     <div class="container" id="page_wrapper">
         <div class="content_page">
             <h1>Le opere di Zola</h1>
-            <hr>
+            <hr class="hr_first">
+            <div class="opere_page p-3">
+                <div class="row">
+                    <div class="container col-lg-8">
+                        <h2>Romanzi Pre-Naturalismo</h2>
+                        <ul>
+                            <li>Racconti a Ninon - 1864 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/Contes_%C3%A0_Ninon">Contes à Ninon</a>)</li>
+                            <li>La confessione di Claude - 1865 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/La_Confession_de_Claude">La Confession de Claude</a>)</li>
+                            <li>Le Vœu d'une morte - 1866 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/Le_V%C5%93u_d%E2%80%99une_morte">Le Vœu d'une morte</a>)</li>
+                            <li>I misteri di Marsiglia - 1867 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/Les_Myst%C3%A8res_de_Marseille">Les Mystères de Marseille</a>)</li>
+                            <li>Teresa Raquin - 1867 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/Th%C3%A9r%C3%A8se_Raquin">Thérèse Raquin</a>)</li>
+                            <li>Madeleine Férat - 1868 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/Madeleine_F%C3%A9rat">Madeleine Férat</a>)</li>
+                            <li>Nuove storielle a Ninetta - 1874 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/Nouveaux_contes_%C3%A0_Ninon">Nouveaux Contes à Ninon</a>)</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 text-center align-self-center">
+                        <img class="immagine_modal" src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Raquin.jpg" alt="Pubblicità storica del roamanzo Thérèse Raquin">  
+                    </div>
+                </div>
+                <hr>
 
-            <h2>Romanzi Pre-Naturalismo</h2>
-            <ul>
-                <li>Racconti a Ninon - 1864 (Contes à Ninon)</li>
-                <li>La confessione di Claude - 1865 (La Confession de Claude)</li>
-                <li>Le Vœu d'une morte - 1866</li>
-                <li>I misteri di Marsiglia - 1867 (Les Mystères de Marseille)</li>
-                <li>Teresa Raquin - 1867 (Thérèse Raquin)</li>
-                <li>Madeleine Férat - 1868</li>
-                <li>Nuove storielle a Ninetta - 1874 (Nouveaux Contes à Ninon)</li>
-            </ul>
+                <div class="row">
+                    <div class="container col-lg-8">
+                        <h2>Ciclo dei <em>Rougon-Macquart</em></h2>
+                        <ul>
+                            <li>La fortuna dei Rougon - 1871 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/La_Fortune_des_Rougon">La Fortune des Rougon</a>)</li>
+                            <li>La cuccagna - 1872 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/La_Cur%C3%A9e">La Curée</a>)</li>
+                            <li>Il ventre di Parigi - 1873 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/Le_Ventre_de_Paris">Le Ventre de Paris</a>)</li>
+                            <li>La conquista di Plassans - 1874 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/La_Conqu%C3%AAte_de_Plassans">La Conquête de Plassans</a>)</li>
+                            <li>La colpa dell'abate Mouret - 1875 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/La_Faute_de_l%E2%80%99abb%C3%A9_Mouret">La Faute de l'Abbé Mouret</a>)</li>
+                            <li>Sua Eccellenza Eugène Rougon - 1876 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/Son_Excellence_Eug%C3%A8ne_Rougon">Son Excellence Eugène Rougon</a>)</li>
+                            <li>L'ammazzatoio - 1877 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/L%E2%80%99Assommoir">L'Assommoir</a>)</li>
+                            <li>Una pagina d'amore - 1878 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/Une_page_d%E2%80%99amour">Une Page d'amour</a>)</li>
+                            <li>Nanà - 1880 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/Nana">Nanà</a>)</li>
+                            <li>Quel che bolle in pentola - 1882 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/Pot-Bouille">Pot-Bouille</a>)</li>
+                            <li>Al paradiso delle signore - 1883 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/Au_bonheur_des_dames">Au Bonheur des Dames</a>)</li>
+                            <li>La gioia di vivere - 1884 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/La_Joie_de_vivre">La Joie de vivre</a>)</li>
+                            <li>Germinal - 1885 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/Germinal">Germinal</a>)</li>
+                            <li>L'Opera - 1886 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/L%E2%80%99%C5%92uvre_(Zola)">L'Œuvre</a>)</li>
+                            <li>La Terra - 1887 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/La_Terre_(%C3%89mile_Zola)">La Terre</a>)</li>
+                            <li>Il Sogno - 1888 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/Le_R%C3%AAve_(Zola)">Le Rêve</a>)</li>
+                            <li>La bestia umana - 1890 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/La_B%C3%AAte_humaine">La Bête humaine</a>)</li>
+                            <li>Il denaro - 1891 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/L%E2%80%99Argent">L'Argent</a>)</li>
+                            <li>La disfatta - 1892 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/La_D%C3%A9b%C3%A2cle">La Débâcle</a>)</li>
+                            <li>Il dottor Pascal - 1893 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/Le_Docteur_Pascal">Le Docteur Pascal</a>)</li>
+                        </ul>
+                    </div>  
+                    <div class="col-lg-4 text-center align-self-center">
+                        <img class="immagine_modal" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Gervaise_demandant_l%27aum%C3%B4ne.jpg" alt="Illustrazione de l'Assommoir">  
+                        <img class="immagine_modal" src="https://upload.wikimedia.org/wikipedia/commons/6/61/Germinal_first_edition_cover.jpg" alt="Frontespizio della prima versione di Germinal">
+                        <img class="immagine_modal" src="https://upload.wikimedia.org/wikipedia/commons/1/16/Image-La_Bete_Humaine_Cover.jpg" alt="Copertina de La Bete Humaine">    
+                    </div> 
+                </div>
+                <hr>
 
-            <h2>Ciclo dei <em>Rougon-Macquart</em></h2>
-            <ul>
-                <li>La fortuna dei Rougon - 1871 (La Fortune des Rougon)</li>
-                <li>La cuccagna - 1872 (La Curée)</li>
-                <li>Il ventre di Parigi - 1873 (Le Ventre de Paris)</li>
-                <li>La conquista di Plassans - 1874 (La Conquête de Plassans)</li>
-                <li>La colpa dell'abate Mouret - 1875 (La Faute de l'Abbé Mouret)</li>
-                <li>Sua Eccellenza Eugène Rougon - 1876 (Son Excellence Eugène Rougon)</li>
-                <li>L'ammazzatoio - 1877 (L'Assommoir)</li>
-                <li>Una pagina d'amore - 1878 (Une Page d'amour)</li>
-                <li>Nanà - 1880 (Nanà)</li>
-                <li>Quel che bolle in pentola - 1882 (Pot-Bouille)</li>
-                <li>Al paradiso delle signore - 1883 (Au Bonheur des Dames)</li>
-                <li>La gioia di vivere - 1884 (La Joie de vivre)</li>
-                <li>Germinal - 1885 (Germinal)</li>
-                <li>L'Opera - 1886 (L'Œuvre)</li>
-                <li>La Terra - 1887 (La Terre)</li>
-                <li>Il Sogno - 1888 (Le Rêve)</li>
-                <li>La bestia umana - 1890 (La Bête humaine)</li>
-                <li>Il denaro - 1891 (L'Argent)</li>
-                <li>La disfatta - 1892 (La Débâcle)</li>
-                <li>Il dottor Pascal - 1893 (Le Docteur Pascal)</li>
-            </ul>
+                <div class="row">
+                    <div class="container col-lg-8">
+                        <h2>Ciclo de <em>Le tre città</em></h2>
+                        <ul>
+                            <li>Lourdes - 1894 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/Lourdes">Lourdes</a>)</li>
+                            <li>Roma - 1896 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/Rome_(Zola)">Rome</a>)</li>
+                            <li>Parigi - 1897 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/Paris_(Zola)">Paris</a>)</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 text-center align-self-center">
+                        <img class="immagine_modal" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Zola_-_Les_Trois_Villes_-_Rome%2C_1896.djvu/page1-611px-Zola_-_Les_Trois_Villes_-_Rome%2C_1896.djvu.jpg" alt="Copertina della prima versione di Roma">  
+                    </div>
+                </div>
+                <hr>
+                
 
-            <h2>Ciclo de <em>Le tre città</em></h2>
-            <ul>  
-                <li>Lourdes - 1894 (Lourdes)</li>
-                <li>Roma - 1896 (Rome)</li>
-                <li>Parigi - 1897 (Paris)</li>
-            </ul>
+                <div class="row">
+                    <div class="container col-lg-8">
+                        <h2>Ciclo de <em>I quattro Vangeli</em></h2>
+                        <ul>
+                            <li>Fecondità - 1899 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/F%C3%A9condit%C3%A9_(Zola)">Fécondité</a>)</li>
+                            <li>Lavoro - 1901 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/Travail_(Zola)">Travail</a>)</li>
+                            <li>Verità - 1903 (postuma) (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/V%C3%A9rit%C3%A9_(Zola)">Vérité</a>)</li>
+                            <li>Giustizia - (incompiuta) (Justice)</li>
+                        </ul>  
+                    </div>
+                    <div class="col-lg-4 text-center align-self-center">
+                        <img class="immagine_modal" id="fecondite" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Fecondite.jpg" alt="Manifesto pubblicitario di Féconité presente su L'Aurore">   
+                    </div>
+                </div>
+                <hr>
+                
+                <h2>Scritti di saggistica</h2>
+                <ul>
+                    <li>Il romanzo sperimentale - 1880 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/Le_Roman_exp%C3%A9rimental">Le Roman Expérimental</a>)</li>
+                    <li>Il naturalismo in teatro - 1881 (<a target="_blank" rel="noopener" href="https://fr.wikisource.org/wiki/Le_Naturalisme_au_th%C3%A9%C3%A2tre">Le Naturalisme au théâtre</a>)</li>
 
-            <h2>Ciclo de <em>I quattro Vangeli</em></h2>
-            <ul>
-                <li>Fecondità - 1899 (Fécondité)</li>
-                <li>Lavoro - 1901 (Travail)</li>
-                <li>Verità - 1903 (postuma) (Vérité)</li>
-                <li>Giustizia - (incompiuta) (Justice)</li>
-            </ul>   
-            
-            <h2>Scritti di saggistica</h2>
-            <ul>
-                <li>Il romanzo sperimentale - 1880 (Le Roman Expérimental)</li>
-                <li>I romanzieri naturalisti - 1881 (Les Romanciers Naturalistes)</li>
-                <li>Il naturalismo in teatro - 1881 (Le Naturalisme au théâtre, les théories et les exemples)</li>
-            </ul>  
+                </ul>
+            </div>          
         </div>      
+    </div>
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img alt="" class="modal-content" id="img01">
+        <div id="caption"></div>
     </div>
       
 
