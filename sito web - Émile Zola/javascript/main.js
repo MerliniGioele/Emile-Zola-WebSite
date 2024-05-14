@@ -1,6 +1,8 @@
+import {API_KEY_GBOOKS} from './config.js';
+
 $(document).ready(function () {
   //ESTRAZIONE LIBRI CON API di Google Books
-  const apiKey = 'AIzaSyBYoh8bmeycS-MkfKcD-krgV6uVOO1sP40';
+  const apiKey = API_KEY_GBOOKS;
 
   // Funzione per ottenere informazioni (json) su vari libri di Émile Zola
   function getBookInfo(author) {
@@ -98,7 +100,7 @@ $(document).ready(function () {
 
 
 
-  //INSERIMENTO Citazioni
+  //inserimento Citazioni
   fetch('javascript/quotes.json')//faccio una fetch del file quotes.json
   .then( response => {
     if (!response.ok) {

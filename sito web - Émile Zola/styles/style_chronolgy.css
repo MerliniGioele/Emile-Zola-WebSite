@@ -7,7 +7,7 @@ body > div {
     position: relative;
 }
 
-/*la timeline  */
+/*la timeline */
 .main-timeline::after {
     content: "";
     position: absolute;
